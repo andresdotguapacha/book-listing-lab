@@ -2,6 +2,8 @@
 
 A full-stack digital library app with a React frontend and a .NET backend API, allowing users to add, edit, filter, and manage books and authors. The UI has a retro green-on-black console vibe.
 
+Take a look [PREVIEW](https://jam.dev/c/06e1b4e4-ec5e-400a-8917-67b800de5633)
+
 ---
 
 ## Table of Contents
@@ -16,8 +18,7 @@ A full-stack digital library app with a React frontend and a .NET backend API, a
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#license)
-- [Contact](#contact)
-
+  
 ---
 
 ## Project Overview
@@ -59,72 +60,88 @@ This project is a simple digital library management system featuring:
 
 ## Backend Setup (BookListingAPI)
 
-1. Navigate to the backend folder:
+1.  Navigate to the backend folder:
 
-   ```bash
-   cd BookListingAPI
-   ```
+    ```bash
+    cd BookListingAPI
+    ```
 
-Configure the connection string in appsettings.json:
+2.  Configure the connection string in `appsettings.json`:
 
-"ConnectionStrings": {
-  "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=BookListingDB;Trusted_Connection=True;"
-}
+    ```json
+    "ConnectionStrings": {
+      "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=BookListingDB;Trusted_Connection=True;"
+    }
+    ```
 
-Restore Nugget Packages:
-dotnet restore
+3.  Restore NuGet Packages:
 
-Apply Entity Framework migrations and update the database:
+    ```bash
+    dotnet restore
+    ```
 
-bash
-Copy
-Edit
-dotnet ef database update
+4.  Apply Entity Framework migrations and update the database:
 
+    ```bash
+    dotnet ef database update
+    ```
 
-Run the backend API on port 5080:
+5.  Run the backend API:
 
-bash
-Copy
-Edit
-dotnet run --urls "http://localhost:5080"
-Frontend Setup (book-listing-web)
-Navigate to the frontend folder:
+    ```bash
+    dotnet run
+    ```
 
-bash
-Copy
-Edit
-cd book-listing-web
-Install dependencies:
+---
 
-bash
-Copy
-Edit
-npm install
-Start the React development server:
+## Frontend Setup (book-listing-web)
 
-bash
-Copy
-Edit
-npm start
-The frontend will run on http://localhost:3000 by default and communicate with the backend API on port 5080.
+1.  Navigate to the frontend folder:
 
-Running the Application
-Start the backend API (see Backend Setup).
+    ```bash
+    cd book-listing-web
+    ```
 
-Start the frontend React app (see Frontend Setup).
+2.  Install dependencies:
 
-Open your browser at http://localhost:3000 to access the app.
+    ```bash
+    npm install
+    ```
 
-Technologies Used
-Backend: .NET 7, ASP.NET Core Web API, Entity Framework Core, SQL Server
+3.  Start the React development server:
 
-Frontend: React 19, TypeScript, Axios, CSS (retro terminal theme)
+    ```bash
+    npm start
+    ```
 
-Tools: Visual Studio / VS Code, npm, Entity Framework CLI
+The frontend will run on `http://localhost:3000` by default and communicate with the backend API on port 5080.
 
-Contributing
+---
+
+## Running the Application
+
+1.  Start the backend
+2.  Start the frontend React app
+3.  Open your browser at `http://localhost:3000` to access the app.
+
+---
+
+## Technologies Used
+
+-   **Backend:** .NET 7, ASP.NET Core Web API, Entity Framework Core, SQL Server
+-   **Frontend:** React 19, TypeScript, Axios, CSS (retro terminal theme)
+-   **Tools:** Visual Studio / VS Code, npm, Entity Framework CLI
+
+---
+
+## Contributing
+
 Contributions are welcome! Feel free to open issues or submit pull requests for bug fixes and improvements.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+---
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
