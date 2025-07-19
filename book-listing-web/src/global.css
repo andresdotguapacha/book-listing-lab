@@ -1,0 +1,286 @@
+/* Global styles with old-school marketing feel */
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #00ff00;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+#app-root {
+  width: 80vw;
+  max-width: 1200px; /* optional max width */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000000;
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #00ff00;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.error-text {
+  color: #ff5555;
+  font-weight: bold;
+}
+
+/* 3-column layout container */
+.three-column-layout {
+  display: flex;
+  gap: 20px;
+  margin-top: 12px;
+  width: 100%;
+  background-color: #000000;
+  border: none;
+  outline: none;
+}
+
+/* Shared column styles */
+.column {
+  background-color: #000000;
+  padding: 12px;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Specific widths for each column */
+.contextual-menu {
+  flex: 1 1 280px;
+  max-width: 280px;
+  min-width: 280px;
+}
+
+.filters {
+  flex: 1 1 280px;
+  max-width: 280px;
+  min-width: 280px;
+}
+
+.books-list-section {
+  flex: 2 1 400px;
+  max-width: 400px;
+  min-width: 400px;
+}
+
+/* Filters form */
+.filters-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.filters-form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.filters-form input,
+.filters-form select {
+  background-color: #000000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 10px 14px;
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0; /* no extra spacing */
+}
+
+.filters-form input::placeholder {
+  color: #e0e0e0;
+  opacity: 1;
+}
+
+.filters-form input:focus,
+.filters-form select:focus {
+  border-color: #00cc00;
+  box-shadow: 0 0 6px #00cc00;
+  background-color: #001100;
+  color: #00ff00;
+}
+
+/* Sort button */
+.sort-button {
+  cursor: pointer;
+  padding: 14px 24px;
+  border: 2px solid #00ff00;
+  background-color: transparent;
+  color: #00ff00;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+  border-radius: 2px;
+}
+
+.sort-button:hover {
+  background-color: #003300;
+}
+
+/* Books list */
+.books-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 12px;
+}
+
+.book-item {
+  border-bottom: 1px solid #00ff00;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-item small {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: #00bb00;
+}
+
+/* Book actions buttons */
+.book-actions {
+  margin-top: 8px;
+}
+
+.book-actions button {
+  cursor: pointer;
+  margin-right: 12px;
+  padding: 8px 16px;
+  border: 2px solid #00ff00;
+  background-color: transparent;
+  color: #00ff00;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+}
+
+.book-actions button:hover {
+  background-color: #003300;
+}
+
+.delete-button {
+  color: #ff4444;
+  border-color: #ff4444;
+}
+
+.delete-button:hover {
+  background-color: #330000;
+  color: #ff4444;
+}
+
+/* Labels */
+.field-label {
+  display: block;
+  color: #00ff00;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-family: "Consolas", monospace;
+  user-select: none;
+}
+
+/* Inputs, selects, textareas */
+input,
+select,
+textarea {
+  background-color: #000000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 10px 14px;
+  margin: 0 0 14px 0;
+  outline: none;
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #e0e0e0;
+  opacity: 1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #00cc00;
+  box-shadow: 0 0 6px #00cc00;
+  background-color: #001100;
+  color: #00ff00;
+}
+
+/* Buttons in BookForm - consistent neon styling */
+form button {
+  cursor: pointer;
+  margin-top: 8px;
+  padding: 10px 20px;
+  border: 2px solid #00ff00;
+  background-color: transparent;
+  color: #00ff00;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  font-family: "Consolas", monospace;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #003300;
+  outline: none;
+  border-color: #00cc00;
+  box-shadow: 0 0 8px #00cc00;
+}
+
+/* Remove button in authors list */
+.remove-author {
+  color: #ff4444;
+  border-color: #ff4444;
+}
+
+.remove-author:hover {
+  background-color: #330000;
+  color: #ff4444;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+  .three-column-layout {
+    flex-direction: column;
+  }
+
+  .contextual-menu,
+  .filters,
+  .books-list-section {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
